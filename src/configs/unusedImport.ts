@@ -5,7 +5,7 @@ export function unusedImport(): Config[] {
   return [{
     name: 'unusedImport',
     plugins: {
-      unusedImports,
+      'unused-imports': unusedImports,
     },
     rules: {
       'no-unused-vars': 'off',
