@@ -2,6 +2,7 @@
   "name": "@coderbaozi/eslint-config",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@9.15.0",
   "description": "coderbaozi eslint config",
   "author": "coderbaozi",
   "license": "MIT",
@@ -19,7 +20,6 @@
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
@@ -46,7 +46,6 @@
     "bumpp": "^10.0.2",
     "eslint": "^9.20.0",
     "lint-staged": "^15.4.3",
-    "pnpm": "^10.2.1",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.7.3",
     "vite": "^6.1.0",
