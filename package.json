@@ -1,0 +1,61 @@
+{
+  "name": "@coderbaozi/eslint-config",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "coderbaozi eslint config",
+  "author": "coderbaozi",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/coderbaozi",
+  "homepage": "https://github.com/coderbaozi/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderbaozi/eslint-config.git"
+  },
+  "bugs": "https://github.com/coderbaozi/eslint-config/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build -w",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && pnpm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "typescript-eslint": "^8.24.1"
+  },
+  "devDependencies": {
+    "@rslib/core": "^0.4.1",
+    "@types/node": "^22.13.1",
+    "bumpp": "^10.0.2",
+    "eslint": "^9.20.0",
+    "lint-staged": "^15.4.3",
+    "pnpm": "^10.2.1",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
