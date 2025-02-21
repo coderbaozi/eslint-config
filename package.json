@@ -1,7 +1,7 @@
 {
   "name": "@coderbaozi/eslint-config",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@9.15.0",
   "description": "coderbaozi eslint config",
   "author": "coderbaozi",
