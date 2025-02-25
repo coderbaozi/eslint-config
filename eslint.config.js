@@ -1,8 +1,4 @@
 // @ts-check
-import antfu from '@antfu/eslint-config'
+import { coderbaozi } from './dist/index.js'
 
-export default antfu(
-  {
-    type: 'lib',
-  },
-)
+export default coderbaozi({})

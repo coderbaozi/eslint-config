@@ -1,5 +1,15 @@
+import {
+  jsonc,
+  prettier,
+  react,
+  regex,
+  sortImports,
+  sortPackageJson,
+  sortTsconfig,
+  typescript,
+  unusedImport,
+} from './configs'
 import type { Config, Options } from './types'
-import { jsonc, prettier, react, regex, sortImports, sortPackageJson, sortTsconfig, typescript, unusedImport } from './configs'
 
 export function coderbaozi(options: Options): Config[] {
   const configs: Config[] = []
@@ -8,7 +18,16 @@ export function coderbaozi(options: Options): Config[] {
     configs.push(...react())
   }
 
-  configs.push(...prettier(), ...typescript(), ...jsonc(), ...unusedImport(), ...regex(), ...sortImports(), ...sortPackageJson(), ...sortTsconfig())
+  configs.push(
+    ...prettier(),
+    ...typescript(),
+    ...jsonc(),
+    ...unusedImport(),
+    ...regex(),
+    ...sortImports(),
+    ...sortPackageJson(),
+    ...sortTsconfig(),
+  )
 
   return configs
 }

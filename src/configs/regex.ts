@@ -1,9 +1,11 @@
-import type { Config } from '../types'
 import { configs } from 'eslint-plugin-regexp'
+import type { Config } from '../types'
 
 export function regex(): Config[] {
-  return [{
-    ...configs['flat/recommended'],
-    name: 'coderbaozi/regex',
-  }]
+  return [
+    {
+      ...configs['flat/recommended'],
+      name: 'coderbaozi/regex',
+    },
+  ]
 }

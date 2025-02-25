@@ -1,9 +1,10 @@
-import type { Linter } from 'eslint'
-import type { Config } from '../types'
 import pluginJsonc from 'eslint-plugin-jsonc'
 import parserJsonc from 'jsonc-eslint-parser'
+import type { Config } from '../types'
+import type { Linter } from 'eslint'
 
-const jsoncRules = pluginJsonc.configs['recommended-with-jsonc'].rules as Linter.RulesRecord
+const jsoncRules = pluginJsonc.configs['recommended-with-jsonc']
+  .rules as Linter.RulesRecord
 
 export function jsonc(): Config[] {
   return [

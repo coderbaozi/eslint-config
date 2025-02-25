@@ -1,41 +1,45 @@
-import type { Config } from '../types'
 import pluginPerfectionist from 'eslint-plugin-perfectionist'
+import type { Config } from '../types'
 
 export function sortImports(): Config[] {
   return [
-    { name: 'coderbaozi/sort-imports', plugins: { perfectionist: pluginPerfectionist }, rules: {
-      'perfectionist/sort-imports': [
-        'warn',
-        {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'internal-type',
-            'parent',
-            'parent-type',
-            'sibling',
-            'sibling-type',
-            'index',
-            'index-type',
-            'object',
-            'type',
-            'side-effect',
-            'side-effect-style',
-          ],
-          internalPattern: ['^[~@#]/.*'],
-          newlinesBetween: 'ignore',
-        },
-      ],
-      'perfectionist/sort-named-exports': [
-        'warn',
-        { groupKind: 'values-first' },
-      ],
-      'perfectionist/sort-named-imports': [
-        'warn',
-        { groupKind: 'values-first' },
-      ],
-    } },
+    {
+      name: 'coderbaozi/sort-imports',
+      plugins: { perfectionist: pluginPerfectionist },
+      rules: {
+        'perfectionist/sort-imports': [
+          'warn',
+          {
+            groups: [
+              'builtin',
+              'external',
+              'internal',
+              'internal-type',
+              'parent',
+              'parent-type',
+              'sibling',
+              'sibling-type',
+              'index',
+              'index-type',
+              'object',
+              'type',
+              'side-effect',
+              'side-effect-style',
+            ],
+            internalPattern: ['^[~@#]/.*'],
+            newlinesBetween: 'ignore',
+          },
+        ],
+        'perfectionist/sort-named-exports': [
+          'warn',
+          { groupKind: 'values-first' },
+        ],
+        'perfectionist/sort-named-imports': [
+          'warn',
+          { groupKind: 'values-first' },
+        ],
+      },
+    },
   ]
 }
 
@@ -103,7 +107,8 @@ export function sortPackageJson(): Config[] {
           },
           {
             order: { type: 'asc' },
-            pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies(Meta)?$',
+            pathPattern:
+              '^(?:dev|peer|optional|bundled)?[Dd]ependencies(Meta)?$',
           },
           {
             order: ['types', 'require', 'import', 'default'],
@@ -140,7 +145,7 @@ export function sortTsconfig(): Config[] {
           },
           {
             order: [
-            /* Projects */
+              /* Projects */
               'incremental',
               'composite',
               'tsBuildInfoFile',

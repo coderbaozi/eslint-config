@@ -1,28 +1,28 @@
 {
   "name": "@coderbaozi/eslint-config",
-  "type": "module",
   "version": "0.0.6",
   "packageManager": "pnpm@9.15.0",
   "description": "coderbaozi eslint config",
-  "author": "coderbaozi",
+  "type": "module",
+  "keywords": [],
   "license": "MIT",
-  "funding": "https://github.com/sponsors/coderbaozi",
   "homepage": "https://github.com/coderbaozi/eslint-config#readme",
+  "bugs": "https://github.com/coderbaozi/eslint-config/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coderbaozi/eslint-config.git"
   },
-  "bugs": "https://github.com/coderbaozi/eslint-config/issues",
-  "keywords": [],
-  "sideEffects": false,
-  "exports": {
-    ".": "./dist/index.js"
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "author": "coderbaozi",
+  "funding": "https://github.com/sponsors/coderbaozi",
   "files": [
     "dist"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "sideEffects": false,
   "scripts": {
     "build": "rslib build",
     "dev": "rslib build -w",
