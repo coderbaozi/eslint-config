@@ -1,3 +1,7 @@
+export * from './jsonc'
 export * from './prettier'
+export * from './react'
+export * from './regex'
+export * from './sort'
 export * from './typescript'
 export * from './unusedImport'
