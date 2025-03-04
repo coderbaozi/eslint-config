@@ -14,6 +14,9 @@ importers:
       eslint-config-prettier:
         specifier: ^10.0.1
         version: 10.0.1(eslint@9.20.1(jiti@2.4.2))
+      eslint-plugin-enum:
+        specifier: ^0.0.7
+        version: 0.0.7
       eslint-plugin-jsonc:
         specifier: ^2.19.1
         version: 2.19.1(eslint@9.20.1(jiti@2.4.2))
@@ -900,6 +903,9 @@ packages:
     peerDependenciesMeta:
       '@eslint/json':
         optional: true
+
+  eslint-plugin-enum@0.0.7:
+    resolution: {integrity: sha512-KKOpqZx+r1gRXE0sRj5gb6zVIBOTA21rm/QV+Rsk5an2Q4+8eaGRu1b1KGNdWru5ZYk7K1lMIu57OTn8rxLXiQ==}
 
   eslint-plugin-jsonc@2.19.1:
     resolution: {integrity: sha512-MmlAOaZK1+Lg7YoCZPGRjb88ZjT+ct/KTsvcsbZdBm+w8WMzGx+XEmexk0m40P1WV9G2rFV7X3klyRGRpFXEjA==}
@@ -2861,6 +2867,8 @@ snapshots:
       eslint: 9.20.1(jiti@2.4.2)
       esquery: 1.6.0
       jsonc-eslint-parser: 2.4.0
+
+  eslint-plugin-enum@0.0.7: {}
 
   eslint-plugin-jsonc@2.19.1(eslint@9.20.1(jiti@2.4.2)):
     dependencies:

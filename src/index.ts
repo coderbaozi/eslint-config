@@ -1,4 +1,5 @@
 import {
+  constEnum,
   jsonc,
   prettier,
   react,
@@ -27,6 +28,7 @@ export function coderbaozi(options: Options): Config[] {
     ...sortImports(),
     ...sortPackageJson(),
     ...sortTsconfig(),
+    ...constEnum(),
   )
 
   return configs
