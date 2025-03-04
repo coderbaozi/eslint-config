@@ -1,6 +1,6 @@
 {
   "name": "@coderbaozi/eslint-config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "packageManager": "pnpm@9.15.0",
   "description": "coderbaozi eslint config",
   "type": "module",
