@@ -10,6 +10,7 @@ import {
   typescript,
   unusedImport,
 } from './configs'
+import { cssConfig } from './configs/css'
 import type { Config, Options } from './types'
 
 export function coderbaozi(options: Options): Config[] {
@@ -29,6 +30,7 @@ export function coderbaozi(options: Options): Config[] {
     ...sortPackageJson(),
     ...sortTsconfig(),
     ...constEnum(),
+    ...cssConfig(),
   )
 
   return configs
