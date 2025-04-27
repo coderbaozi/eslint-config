@@ -20,6 +20,10 @@ export function coderbaozi(options: Options): Config[] {
     configs.push(...react())
   }
 
+  if (options.css) {
+    configs.push(...cssConfig())
+  }
+
   configs.push(
     ...prettier(),
     ...typescript(),
@@ -30,7 +34,6 @@ export function coderbaozi(options: Options): Config[] {
     ...sortPackageJson(),
     ...sortTsconfig(),
     ...constEnum(),
-    ...cssConfig(),
   )
 
   return configs
