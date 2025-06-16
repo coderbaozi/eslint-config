@@ -13,7 +13,7 @@ import {
 import { cssConfig } from './configs/css'
 import type { Config, Options } from './types'
 
-export function coderbaozi(options: Options): Config[] {
+export function coderbaozi(options: Options = {}): Config[] {
   const configs: Config[] = []
 
   if (options.react) {
@@ -38,3 +38,5 @@ export function coderbaozi(options: Options): Config[] {
 
   return configs
 }
+
+export default coderbaozi
